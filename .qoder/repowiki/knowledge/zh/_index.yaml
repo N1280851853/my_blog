@@ -1,0 +1,68 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: main
+nodes_managed: true
+exported_at: "2026-11-26T13:43:59Z"
+modules:
+    "":
+        dir_name: Fomalhaut Hexo 博客站点根工程
+        title: Fomalhaut Hexo 博客站点根工程
+        scope:
+            - README.md
+            - _config.yml
+            - _config.fomalhaut.yml
+            - package.json
+            - gulpfile.js
+            - .gitignore
+            - LICENSE
+            - package-lock.json
+            - vercel.json
+        source_files: []
+        children:
+            - build_scripts
+            - scaffolds
+            - site_content
+            - tests_and_tooling
+        depends_on: []
+        related_to: []
+    build_scripts:
+        dir_name: Hexo 站点级构建与渲染补丁脚本集
+        title: Hexo 站点级构建与渲染补丁脚本集
+        scope:
+            - scripts/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: site_content
+    scaffolds:
+        dir_name: 文章脚手架模板
+        title: 文章脚手架模板
+        scope:
+            - scaffolds/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    site_content:
+        dir_name: Hexo 站点源码与静态资源
+        title: Hexo 站点源码与静态资源
+        scope:
+            - source/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: build_scripts
+            - path: tests_and_tooling
+    tests_and_tooling:
+        dir_name: 构建部署工具与前端模块测试套件
+        title: 构建部署工具与前端模块测试套件
+        scope:
+            - tools/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: site_content

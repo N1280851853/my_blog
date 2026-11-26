@@ -1,0 +1,16 @@
+schema_version: 1
+module_path: ""
+title: Fomalhaut Hexo 博客站点根工程
+scope:
+    - README.md
+    - _config.yml
+    - _config.fomalhaut.yml
+    - package.json
+    - gulpfile.js
+    - .gitignore
+    - LICENSE
+    - package-lock.json
+    - vercel.json
+source_files: []
+depends_on: []
+related_to: []

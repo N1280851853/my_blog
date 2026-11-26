@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Demo
+title: 个人知识网站
 subtitle:
-description: "一个基于 Hexo + Fomalhaut 主题的演示站点"
-keywords: "Hexo,Butterfly,Fomalhaut,博客,主题,卡片式UI"
-author: Demo
+description: "记录成长的一些笔记"
+keywords: "Hexo,博客"
+author: 王慧超
 language: zh-CN
 timezone: ""
 
@@ -18,7 +18,7 @@ abbrlink:
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://example.com/
+url: https://fomalhaut-blog-ose6tlu97zb.qoder.zone/
 permalink: posts/:abbrlink.html
 permalink_defaults:
 pretty_urls:
