@@ -23,7 +23,8 @@
   var SAME = ";--darkmode-bg:";
   // 新增互动偏好：首帧就隐藏关闭的挂件（猫咪由 deferred 脚本创建）。
   d.classList.toggle('beauty-neko-off', ls('nekoOn') === '0');
-  // 1) 自定义壁纸
+  // 1) 自定义壁纸（blogbg 为 default/缺失时不写 defineBg，首屏默认背景由配置里 <style id="defineBg"> 的内联兜底提供，
+  //    现默认值为 url(/assets/first_index.jpg)，与 settings.js 的 resetBg_() 逐字一致）
   var bg = def(ls("blogbg"), "default").replace(/^\s+|\s+$/g, "");
   if (bg !== "default" && /^(#|url\(|linear-gradient|radial-gradient|https?:)/.test(bg)) {
     tag("defineBg", ":root{--default-bg:" + bg + SAME + bg + ";--mobileday-bg:" + bg + ";--mobilenight-bg:" + bg + ";}");

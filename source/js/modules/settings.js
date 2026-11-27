@@ -747,15 +747,17 @@ function bgValToUrl(s) {
 }
 // 更换背景(自己的代码)
 restoreAppearanceBackground();
-// 默认背景
+// 默认背景（2026-11-26 改为站内本地大图，四种模式统一用同一张，夜间靠 #web_bg:before 遮罩压暗）
+// 注意：这四个值必须与 _config.fomalhaut.yml inject.head 里 <style id="defineBg"> 的内联兜底逐字一致，
+// 否则运行时覆盖前浏览器会按内联值先下载一份旧图。
 function resetBg_() {
   var el = document.getElementById("defineBg");
   if (!el) return;
   el.innerText = `:root{
-    --default-bg: url(https://picsum.photos/id/1015/1920/1080);
-    --darkmode-bg:url(https://picsum.photos/id/1044/1920/1080);
-    --mobileday-bg: url(https://picsum.photos/id/1018/1920/1080);
-    --mobilenight-bg: url(https://picsum.photos/id/1039/1920/1080);
+    --default-bg: url(/assets/first_index.jpg);
+    --darkmode-bg:url(/assets/first_index.jpg);
+    --mobileday-bg: url(/assets/first_index.jpg);
+    --mobilenight-bg: url(/assets/first_index.jpg);
   }`;
 }
 

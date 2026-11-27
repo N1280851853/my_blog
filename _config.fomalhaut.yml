@@ -794,13 +794,13 @@ tag_ui: # 留空或 index
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
 # "#e4f4f6" "#efefef"
 background:
-  #【必选】默认背景 url(https://picsum.photos/id/1015/1920/1080)
+  #【必选】默认背景 url(/assets/first_index.jpg)（实际值由运行时 --default-bg 提供，见 inject.head 的 defineBg 内联兜底与 settings.js 的 resetBg_()）
   default: var(--default-bg)
-  #【可选】PC端夜间模式背景 url(https://picsum.photos/id/1044/1920/1080)
+  #【可选】PC端夜间模式背景 url(/assets/first_index.jpg)（夜间靠 #web_bg:before 遮罩压暗，不再单独换图）
   darkmode: var(--darkmode-bg)
-  #【可选】移动端日间默认背景 url(https://picsum.photos/id/1018/1920/1080)
+  #【可选】移动端日间默认背景 url(/assets/first_index.jpg)
   mobileday: var(--mobileday-bg)
-  #【可选】移动端夜间模式背景 url(https://picsum.photos/id/1039/1920/1080)
+  #【可选】移动端夜间模式背景 url(/assets/first_index.jpg)
   mobilenight: var(--mobilenight-bg)
 
 # Footer Background
@@ -1207,9 +1207,10 @@ inject:
     - <style id="transPercent"></style> # 透明度调节
     - <style id="bgFilterParam"></style> # 背景滤镜
     - <span id="fps" aria-hidden="true"></span> # 帧率检测（纯装饰，读屏不播报）
-    - <style id="defineBg">:root{--default-bg:url(https://picsum.photos/id/1015/1920/1080);--darkmode-bg:url(https://picsum.photos/id/1044/1920/1080);--mobileday-bg:url(https://picsum.photos/id/1018/1920/1080);--mobilenight-bg:url(https://picsum.photos/id/1039/1920/1080);}</style> # 默认背景（内联兜底：即使 fomal.js 未执行，首屏也有背景图；运行时会被 fomal.js 覆盖）
-    # 注意：夜间那张的地址必须与 source/js/modules/settings.js 的 resetBg_() 逐字一致 ——
+    - <style id="defineBg">:root{--default-bg:url(/assets/first_index.jpg);--darkmode-bg:url(/assets/first_index.jpg);--mobileday-bg:url(/assets/first_index.jpg);--mobilenight-bg:url(/assets/first_index.jpg);}</style> # 默认背景（内联兜底：即使 fomal.js 未执行，首屏也有背景图；运行时会被 fomal.js 覆盖）
+    # 注意：这里的地址必须与 source/js/modules/settings.js 的 resetBg_() 逐字一致 ——
     # 运行时覆盖前浏览器已按这里的值下过一份，URL 不一致就会同一张图下两份。
+    # 2026-11-26 默认背景改为站内本地大图 /assets/first_index.jpg，四种模式统一用同一张。
     - <style id="menu_shadow"></style> # 菜单发光样式
     - <style id="nav-display"></style> # 菜单栏常驻
     - <style id="aside-show"></style> # 侧栏显隐
