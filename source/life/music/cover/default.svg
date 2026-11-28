@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e3f2f5"/>
+      <stop offset="1" stop-color="#b9dce6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="300" fill="url(#g)"/>
+  <circle cx="150" cy="132" r="62" fill="#ffffff" opacity="0.55"/>
+  <g fill="#4a7c8c">
+    <path d="M172 96v58a20 20 0 1 1-8-16V110l-34 8v44a20 20 0 1 1-8-16V104l50-12z"/>
+  </g>
+  <text x="150" y="238" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#3d6b7a">八音盒</text>
+  <text x="150" y="264" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#5f8b99">本地歌单</text>
+</svg>

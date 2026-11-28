@@ -24,7 +24,7 @@
 本主题是**整套站点**的一部分，不单独发布到 npm，安装方式就是克隆整个仓库：
 
 ```bash
-git clone https://github.com/fomalhaut1998/hexo-theme-fomalhaut.git my-blog
+git clone https://github.com/N1280851853/my_blog.git my-blog
 cd my-blog && npm install && npx hexo server
 ```
 

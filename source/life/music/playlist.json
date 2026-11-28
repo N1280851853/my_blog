@@ -1,0 +1,26 @@
+{
+  "_说明": "八音盒本地歌单配置 —— 新增/删除歌曲只需改这个文件的 songs 数组，并把音频/封面文件放进对应目录，无需改任何代码。字段：name 曲名 / artist 艺术家 / url 音频站内绝对路径 / cover 封面(可省略，省略时用默认封面) / lrc 歌词文件(可省略，省略时不显示歌词且不报错)。",
+  "songs": [
+    {
+      "name": "春娇与志明",
+      "artist": "街道办GDC-欧阳耀莹",
+      "url": "/life/music/audio/春娇与志明-街道办GDC-欧阳耀莹.flac",
+      "cover": "",
+      "lrc": "/life/music/audio/春娇与志明-街道办GDC-欧阳耀莹.lrc"
+    },
+    {
+      "name": "岁月神偷",
+      "artist": "金玟岐",
+      "url": "/life/music/audio/岁月神偷-金玟岐.flac",
+      "cover": "",
+      "lrc": "/life/music/audio/岁月神偷-金玟岐.lrc"
+    },
+    {
+      "name": "小半",
+      "artist": "陈粒",
+      "url": "/life/music/audio/小半-陈粒.flac",
+      "cover": "",
+      "lrc": "/life/music/audio/小半-陈粒.lrc"
+    }
+  ]
+}

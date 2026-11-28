@@ -279,7 +279,7 @@ date: 2022-08-10 16:05:11
   <div class="ab2-kv">
     <div class="ab2-kv-row"><span class="ab2-kv-k">站点名称</span><span class="ab2-kv-v">Demo</span></div>
     <div class="ab2-kv-row"><span class="ab2-kv-k">主题</span><span class="ab2-kv-v">hexo-theme-fomalhaut v1.0.5（基于 Butterfly 4.3.1 二次开发）</span></div>
-    <div class="ab2-kv-row"><span class="ab2-kv-k">邮箱</span><span class="ab2-kv-v"><a href="mailto:you@example.com">you@example.com</a></span></div>
+    <div class="ab2-kv-row"><span class="ab2-kv-k">邮箱</span><span class="ab2-kv-v"><a href="mailto:2316140106@qq.com">2316140106@qq.com</a></span></div>
     <div class="ab2-kv-row"><span class="ab2-kv-k">源码</span><span class="ab2-kv-v"><a href="https://github.com/yourname/hexo-theme-fomalhaut" target="_blank" rel="noopener">github.com/yourname/hexo-theme-fomalhaut</a></span></div>
     <div class="ab2-kv-row"><span class="ab2-kv-k">技术栈</span><span class="ab2-kv-v"><span class="ab2-chips"><i>Hexo 6.3.0</i><i>Pug</i><i>Stylus</i><i>gulp</i><i>Vercel</i><i>Cloudflare Pages</i></span></span></div>
   </div>

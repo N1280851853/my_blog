@@ -90,6 +90,10 @@ const getFileType = (fileName) => {
     xml: 'application/xml', txt: 'text/plain', map: 'application/json',
     webmanifest: 'application/manifest+json', manifest: 'application/manifest+json',
     mp3: 'audio/mpeg', m4a: 'audio/mp4', mp4: 'video/mp4', webm: 'video/webm',
+    /* —— 2026-11-27 补齐（八音盒改本地音频）——
+       本地歌单会用 wav/flac/ogg 等格式，原来落到 text/plain 会被浏览器猜错类型。
+       与上面 mp3/m4a 一样归到音视频（TTL_MEDIA 24h），补上对应 MIME。 */
+    wav: 'audio/wav', flac: 'audio/flac', ogg: 'audio/ogg', oga: 'audio/ogg', opus: 'audio/ogg',
     pdf: 'application/pdf', wasm: 'application/wasm'
   };
   return map[suffix] || 'text/plain';
@@ -157,6 +161,12 @@ self.addEventListener('fetch', (event) => {
   let url;
   try { url = new URL(req.url); } catch (e) { return; }
   if (TARGET_HOSTS.indexOf(url.hostname) === -1) return;   // ★ 关键：非目标域名完全不介入
+
+  /* 媒体 Range 请求（音频/视频拖动进度）放行回源：下面 cache-first 返回的是完整 200
+     响应，不带 Content-Range / Accept-Ranges，浏览器会判定媒体不可 seek（设 currentTime
+     被钳回 0）。带 Range 的请求直接交回浏览器走网络（源站支持 Range），保证进度拖动正常；
+     不带 Range 的完整请求仍走缓存，省流大头不受影响。八音盒改本地音频后尤其需要。 */
+  if (req.headers.get('Range')) return;
 
   const search = url.search || '';
   const path = fullpath(url.pathname, !!search);

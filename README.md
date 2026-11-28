@@ -406,7 +406,7 @@ avatar:
 
 social:                            # 社交图标，格式： 名称: 链接 || 图标类名 || 动画类名
   Github: https://github.com/yourname || icon-github || faa-tada
-  邮箱: mailto:you@example.com || icon-youxiang || faa-tada
+  邮箱: mailto:2316140106@qq.com || icon-youxiang || faa-tada
 
 index_img: /assets/head.jpg        # 首页大图
 

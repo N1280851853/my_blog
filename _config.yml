@@ -38,6 +38,9 @@ skip_render:
   - 'js/tag-map/*' # leaflet / proj4 第三方库原文件，原样复制，不做 Nunjucks 渲染
   - 'js/ai-chat.js' # AI 助手前端本体（含大段 CSS/JS 字面量），原样复制，不做 Nunjucks 渲染
   - 'box/astronomy/voyager.html' # 旅行者号交互星图，是完整独立页面（自带样式与脚本），由 index.md 用 iframe 引入，原样复制
+  - 'life/music/audio/*' # 八音盒本地音频与歌词（wav/mp3/flac/m4a/lrc），原样复制，不做渲染
+  - 'life/music/cover/*' # 八音盒封面图（svg/png/jpg/webp），原样复制
+  - 'life/music/playlist.json' # 八音盒本地歌单配置，原样复制供前端 music-local.js fetch
 
 # Writing
 new_post_name: :year-:month-:day-:title.md # File name of new posts

@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: site_content
+title: Hexo 博客站点源码（source/）
+scope:
+    - source/
+source_files: []
+depends_on: []
+related_to: []
